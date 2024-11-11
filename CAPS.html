@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>CAPS</title>
+</head>
+<body>
+    <div class="skip"><a href = "#mainContentCAPS">Skip to Main Content</a></div>
+    <header>
+        <div class="logo">
+            <img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo (vertical)" class="logoImageVertical">
+            <img src="images/UMSI_signature_informal_maize-white.png" alt="UMSI Logo (horizontal)" class="logoImageHorizontal">
+        </div>
+        <nav>
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "Tutoring.html">UMSI Tutoring</a></li>
+                <li><a href = "CAPS.html" class="active" aria-current="page">CAPS</a></li>
+                <li><a href = "FoodPantry.html">Food Pantry</a></li>
+            </ul>
+        </nav>
+        <h1>Counseling and Psychological Services (CAPS)</h1>
+    </header>
+    <main class="container" id="mainContentCAPS">
+        <div class="text-block">
+            <h2>Welcome to Counseling and Psychological Services (CAPS)!</h2>
+            <p>University Health & Counseling (UHC) supports the health and well-being of the campus community. We are inspired to help students realize their potential, cope with the stresses of life, work productively, and connect meaningfully with others.</p>
+            <br>
+            <p>CAPS is committed to creating an environment based on our values of multicultural, multi-disciplinary and multi-theoretical practices that allow our diverse student body to access care, receive high quality services and take positive pathways to mental health. We are happy to offer both in-person and virtual services.</p>
+            <br>
+            <p>Our Front Desk (Michigan Union 4th Floor) is open and ready to help support you -- staff members are available throughout the day to assist you with your needs to answer questions, and get you to the right place. We can be reached by phone at: <a href="tel:7347648312">(734)764-8312</a>.</p>
+            <div class="twoImages">
+                <img src="images/MCOMMONS_DSC01644.jpg" alt="A student studing in the Shapiro Undergraduate Library." class="twoImages1"> 
+                <img src="images/MCOMMONS_4B3A6916.jpg" alt="Students pet visiting therapy dogs in Shapiro Undergraduate Library." class="twoImages2">     
+            </div>
+        </div>
+        <div class="text-block">
+            <h3>Scope of Services</h3>
+            <p>In support of the educational goals of the University and the Division of Student Life, Counseling and Psychological Services (CAPS) provides a range of clinical, preventative, and training services consistent with the practices and standards of a nationally accredited university counseling center. CAPS is committed to creating a safe and supportive environment based on our multicultural, multi-disciplinary and multi-theoretical values and practices that allow our diverse student body to access care, to receive high quality services, and to take positive pathways to mental health.</p>
+        </div>
+        <div class="text-block">
+            <h3>Individual Peer Counseling</h3>
+            <p>Peer counseling can offer students a relaxed and laid back place to vent and find support. We are able to listen and relate, as well as give you a judgment-free space to talk out your thoughts. Students have reported appreciating having someone outside of their immediate circle to talk to as well as someone who is able to support them in working through personal challenges.</p>
+        </div>
+        <div class="text-block">
+            <h3>Uwill Teletherapy Services</h3>
+            <p>Uwill is an addition to CAPS services that provides students with video, phone, chat, and message sessions with licensed mental health professionals at no cost. This additional counseling option offers students greater flexibility and allows CAPS to expand its service capacity.</p>
+        </div>
+        <div class="text-block">
+            <h3>First Year Guide</h3>
+            <p>U-M Counseling & Psychological Services (CAPS) welcomes all of our 1st year students including those who are living on campus and those who are located remotely. We are happy to launch a new resource created exclusively for you:<a href="https://drive.google.com/file/d/1nwx-JfGYpcxGRhYM7yzLMwtU-E6rnWLl/view">“Go Blue! A New Student’s Guide to Surviving and Thriving at U-M: Mental Health Tips.”</a></p>
+        </div>
+        <div class="text-block">
+            <h3>Togetherall</h3>
+            <p>Recognizing that some students who are feeling isolated, depressed, or anxious may find it challenging to connect with our resources and verbally express their needs, Counseling and Psychological Services (CAPS) is pleased to announce the piloting of Togetherall, an online, anonymous peer-support tool available for free to our students. Togetherall is a clinically moderated, online peer-to-peer mental health community that reaches and empowers a diverse population of students to anonymously seek and provide support</p>
+        </div>
+        <div class="rateCAPS">
+            <h4>How do you like CAPS services?</h4>
+            <br />
+            <span onclick="gfg(1)" onkeydown="handleKey(event, 1)" tabindex="0" class="star">★</span>
+            <span onclick="gfg(2)" onkeydown="handleKey(event, 2)" tabindex="0" class="star">★</span>
+            <span onclick="gfg(3)" onkeydown="handleKey(event, 3)" tabindex="0" class="star">★</span>
+            <span onclick="gfg(4)" onkeydown="handleKey(event, 4)" tabindex="0" class="star">★</span>
+            <span onclick="gfg(5)" onkeydown="handleKey(event, 5)" tabindex="0" class="star">★</span>
+            <h5 id="output">Rating is: 0/5</h5>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                let stars = document.getElementsByClassName("star");
+                let output = document.getElementById("output");
+    
+                window.gfg = function(n) {
+                    remove();
+                    for (let i = 0; i < n; i++) {
+                        let cls;
+                        if (n == 1) cls = "one";
+                        else if (n == 2) cls = "two";
+                        else if (n == 3) cls = "three";
+                        else if (n == 4) cls = "four";
+                        else if (n == 5) cls = "five";
+                        stars[i].className = "star " + cls;
+                    }
+                    output.innerText = "Rating is: " + n + "/5";
+                }
+    
+                function remove() {
+                    for (let i = 0; i < stars.length; i++) {
+                        stars[i].className = "star";
+                    }
+                }
+    
+                window.handleKey = function(event, rating) {
+                    if (event.key === 'Enter' || event.key === ' ') {
+                        gfg(rating);
+                        event.preventDefault();
+                    }
+                }
+    
+                for (let i = 0; i < stars.length; i++) {
+                    stars[i].addEventListener('click', function() {
+                        gfg(i + 1);
+                    });
+    
+                    stars[i].addEventListener('keydown', function(event) {
+                        handleKey(event, i + 1);
+                    });
+                }
+            });
+        </script>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Tutoring.html">UMSI Tutoring</a></li>
+            <li><a href="CAPS.html">CAPS</a></li>
+            <li><a href="FoodPantry.html">Food Pantry</a></li>
+        </ul>
+        <br>
+        <p>Copyright @ <span id="year"></span> University of Michigan. All rights reserved.</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+    
+</body>
+
+</html>
