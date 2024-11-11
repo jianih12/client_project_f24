@@ -370,10 +370,13 @@ figcaption{
 }
 
 .errorPartOne li {
-    text-decoration: underline;
     color: #00274C;
     display: inline-block;
     margin: 0 10px;
+}
+
+.errorPartOne a{
+    text-decoration: underline;
 }
 
 .errorPartOne h2 {
