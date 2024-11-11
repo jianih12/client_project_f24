@@ -64,4 +64,59 @@
                             <input type="email" id="UM_email" placeholder="JohnS@umich.edu" name="email" required>
                     
                             <label for="date">Select a Date:</label>
-                           
+                            <input type="date" id="date" name="available-date" required>
+                    
+                            <label for="message">Leave A Message:</label>
+                            <textarea name="message" id="message" placeholder="Please leave any additional information or special requests here."></textarea>
+                            <br>
+                    
+                            <input type="submit" value="Submit">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="text-block">
+            <h3>WHAT WE PROVIDE</h3>
+            <div class="card">
+                <div class="card1">
+                    <h4>FOOD</h4>
+                    <br>
+                    <p>Produce, dairy, meat, bread, frozen and shelf-stable foods (i.e. rice, cans, tuna, etc.).</p>    
+                </div>
+                <div class="card2">
+                    <h4>KITCHEN & COOKING</h4>
+                    <br>
+                    <p>Dishes, silverware, pots & pans, Tupperware, cutting boards, knives, and other kitchenware.</p>
+                </div>
+                <div class="card3">
+                    <h4>PERSONAL & HOUSEHOLD</h4>
+                    <br>
+                    <p>Trash bags, toilet paper, cleaning supplies, hygiene products, school supplies, baby items and more.</p>
+                </div>
+                <div class="card4">
+                    <h4>SUPPORT</h4>
+                    <br>
+                    <p>Get connected to campus experts like CAPS, Dean of Students and Financial Aid, as well as SNAP (Michigan’s food program).</p>
+                </div>
+            </div>
+            <img src="images/MCOMMONS_DSC03589.jpg" alt="Students wait for coffee from a food truck."> 
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Tutoring.html">UMSI Tutoring</a></li>
+            <li><a href="CAPS.html">CAPS</a></li>
+            <li><a href="FoodPantry.html">Food Pantry</a></li>
+        </ul>
+        <br>
+        <p>Copyright @ <span id="year"></span> University of Michigan. All rights reserved.</p>
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+    
+</body>
+
+</html>
